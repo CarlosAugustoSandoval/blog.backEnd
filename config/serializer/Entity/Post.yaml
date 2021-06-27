@@ -1,0 +1,16 @@
+App\Entity\Post:
+  attributes:
+    id:
+      groups: [ 'post' ]
+    title:
+      groups: [ 'post' ]
+    date:
+      groups: [ 'post' ]
+    image:
+      groups: [ 'post' ]
+    text:
+      groups: [ 'post' ]
+    blog:
+      groups: [ 'post' ]
+    user:
+      groups: [ 'post' ]

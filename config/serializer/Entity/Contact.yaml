@@ -1,0 +1,12 @@
+App\Entity\Contact:
+  attributes:
+    id:
+      groups: [ 'contact' ]
+    name:
+      groups: [ 'contact' ]
+    email:
+      groups: [ 'contact' ]
+    message:
+      groups: [ 'contact' ]
+    date:
+      groups: [ 'contact' ]
