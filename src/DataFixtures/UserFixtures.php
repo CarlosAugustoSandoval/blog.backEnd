@@ -21,7 +21,6 @@ class UserFixtures extends Fixture
             1,
             'sandovalcarlosaugusto@gmail.com'
         );
-//        $user->setEmail('sandovalcarlosaugusto@gmail.com');
         $password = $this->userPasswordHasher->hashPassword(
             $user,
             'IsabellaSantiago'

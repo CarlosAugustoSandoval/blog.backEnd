@@ -3,26 +3,25 @@
 
 namespace App\Form\Type;
 
-use App\Form\Model\UserDto;
+use App\Form\Model\ContactDto;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class UserFormType extends AbstractType
+class ContactFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', TextType::class);
-        $builder->add('email', TextType::class);
-        $builder->add('password', PasswordType::class);
+        $builder->add('name', TextType::class)
+        ->add('email', TextType::class)
+        ->add('message', TextType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => UserDto::class
+            'data_class' => ContactDto::class
         ]);
     }
 

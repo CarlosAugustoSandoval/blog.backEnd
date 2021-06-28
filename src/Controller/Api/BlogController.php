@@ -15,6 +15,11 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BlogController extends AbstractFOSRestController
 {
+    /**
+     * @var EntityManagerInterface
+     */
+    private $em;
+
     public function __construct(LoggerInterface $logger, EntityManagerInterface $em){
         $this->logger = $logger;
         $this->em = $em;

@@ -16,7 +16,8 @@ class UserNormalizer implements ContextAwareNormalizerInterface
     public function normalize($user, $format = null, array $context = []) {
         $data = $this->normalizer->normalize($user, $format, $context);
         if(!empty($post)) {
-            $data['mail'] = $user->getEmail();
+            $data['email'] = $user->getEmail();
+            $data['name'] = $user->getName();
             $data['id'] = $user->getId();
         }
         return $data;
